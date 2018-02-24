@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'Slabo 27px', serif;
+}
+
+.website_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F06292;
+  padding: 30px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.website_app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.website_app--submit {
+  background-color: white;
+  color: #F06292;
+  border-style: 250px solid;
+  border-radius: 5px;
+  border-color: #F06292;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  outline: none;
+  margin: 40px;
+}
+
+.website_app--submit:hover {
+  background-color: #F06292;
+  color: white;
+  border-color: #F06292;
+  outline: none;
+}
+
+.website_app--text {
+  width: 100vw;
+  height: 140px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+.website_app--text::placeholder {
+  text-align: center;
+}
+
+.website_app--text, select { 
+    outline: none;
+}
+
+.website_answer {
+  font-size: 40px;
+  margin: 20px;
+}
+
+.website_letterCounter {
+  font-size: 30px;
+  margin: 50px;
+}
+
+.website_lettersGuessed {
+  font-size: 30px;
+}
