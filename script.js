@@ -5,6 +5,7 @@ const letterCounter = document.querySelector('.website_letterCounter');
 const lettersGuessed = document.querySelector('.website_lettersGuessed');
 const input = document.querySelector('.website_app--text');
 const websiteAnswer = document.querySelector('.website_answer');
+const websiteApp = document.querySelector('.website_app--submit');
 
 
 function start() {
@@ -20,7 +21,8 @@ function start() {
 
 forma.addEventListener('submit', functSubmit);
 
-function functSubmit() {
+function functSubmit(event) {
+  event.preventDefault();
   if (input.value.length === 1 && input.value.match(/^[a-zA-Z_ ]*$/) && attemptsLeft > 0) {
   printGuesses(input.value.toLowerCase());
   checkResult();
