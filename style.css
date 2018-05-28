@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #F06292;
+  background-color: #70AE6E;
   padding: 30px;
   margin: auto;
   box-sizing: border-box;
@@ -24,10 +24,15 @@ body {
   box-sizing: border-box;
 }
 
+.website_appforma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .website_app--submit {
-  background-color: white;
-  color: #F06292;
-  border-style: 250px solid;
+  width: 15vw;
+  border-style: 2px solid;
   border-radius: 5px;
   border-color: #F06292;
   padding: 1em 1.5em;
@@ -36,21 +41,27 @@ body {
   box-sizing: border-box;
   outline: none;
   margin: 40px;
+  background-color: #70AE6E;
+  color: white;
+  border-color: #70AE6E;
 }
 
 .website_app--submit:hover {
-  background-color: #F06292;
-  color: white;
-  border-color: #F06292;
+  background-color: white;
+  color: #70AE6E;
+  border-color: #70AE6E;
   outline: none;
 }
 
 .website_app--text {
-  width: 100vw;
+  margin: auto;
+  margin-top: 60px;
+  width: 40vw;
   height: 140px;
-  border: none;
   font-size: 20px;
+  border: 5px solid #F06292;
   text-align: center;
+  box-shadow: 6px 6px #F06292;
 }
 
 .website_app--text::placeholder {
@@ -58,7 +69,7 @@ body {
 }
 
 .website_app--text, select { 
-    outline: none;
+  outline: none;
 }
 
 .website_answer {
