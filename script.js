@@ -28,8 +28,8 @@ const hangmanApp = () => {
     event.preventDefault();
     if (input.value.length === 1 && input.value.match(/^[a-zA-Z_ ]*$/) && attemptsLeft > 0) {
     printGuesses(input.value.toLowerCase());
-    setTimeout(() => forma.reset(), 500);
     checkResult();
+    setTimeout(() => forma.reset(), 500);
     } else if (attemptsLeft <= 0) {
       alert("you already lost, goodbye")
     } else {
@@ -39,8 +39,12 @@ const hangmanApp = () => {
 
   const printGuesses = (letter) => {
     if (answer.indexOf(letter) === -1) {
+      input.classList.add("website_app--text--shake");
+      setTimeout(() => input.classList.remove("website_app--text--shake"), 500);
       attemptsLeft--;
       letterCounter.innerText = `Attempts left: ${attemptsLeft}`;
+      letterCounter.classList.add("website_letterCounter--wrong");
+      setTimeout(() => letterCounter.classList.remove("website_letterCounter--wrong"), 1000);
       wrongGuesses.push(letter);
       lettersGuessed.innerText = `Wrong letters: ${wrongGuesses.join(', ')}`;
     } else {
